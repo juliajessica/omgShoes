@@ -1,16 +1,54 @@
-@import "./../bower_components/sass-autoprefixer/scss/prefixes";
+// @import "./../bower_components/sass-autoprefixer/scss/prefixes";
 
-$themeColor-Light: #f3e2c7;
-$themeColor-Dark:#b68d4c;
+// $themeColor-Light: #f3e2c7;
+// $themeColor-Dark:#b68d4c;
+$fontSize: 16px;
 
 $theme-font: verdana, sans-serif;
 
 * {
   padding:0;
   margin: 0;
+
 }
 
 body {
   font: $theme-font;
-  
+}
+
+nav {
+  background-color: black;
+  color: white;
+  font-size: $fontSize;
+  padding: 10px 40px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #d9dce0;
+}
+
+.slide1 {
+  width: 100%;
+}
+
+.title {
+  z-index: 1;
+  position: absolute;
+  top: 400px;
+  left: 730px;
+  font-size: 90px;
+  color: white;
+  text-shadow: 2px 1px 0px rgba(30, 32, 57, 0.92);
+  -webkit-text-shadow: 2px 1px 0px rgba(30, 32, 57, 0.92);
+  -moz-text-shadow: 2px 1px 0px rgba(30, 32, 57, 0.92);
+
+}
+
+.nikes {
+  width: 100%;
 }
