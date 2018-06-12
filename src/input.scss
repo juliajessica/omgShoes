@@ -55,8 +55,9 @@ a:hover {
   @include brandName;
   z-index: 1;
   position: absolute;
-  top: 400px;
-  left: 730px;
+  margin: 4rem;
+  // top: 400px;
+  // left: 730px;
   border: 1px solid white;
   padding-top: 3.2em;
   padding-left: .4em;
@@ -74,6 +75,9 @@ a:hover {
   background: #283048; /* fallback for old browsers */
   background: linear-gradient(to top, #283048, rgba(133,147,152, .5), transparent), url("img/homepage.jpeg") no-repeat center;
   background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 
   .nikes {
     width: 100%;
@@ -148,6 +152,5 @@ a:hover {
     padding-bottom: 3.2em;
     opacity: .2px;
     margin-left: .3em;
-
   }
 }
