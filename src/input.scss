@@ -51,25 +51,6 @@ a:hover {
   color: #d9dce0;
 }
 
-.title {
-  @include brandName;
-  z-index: 1;
-  position: absolute;
-  margin: 4rem;
-  // top: 400px;
-  // left: 730px;
-  border: 1px solid white;
-  padding-top: 3.2em;
-  padding-left: .4em;
-  padding-right: .4em;
-  padding-bottom: 3.2em;
-  opacity: .2px;
-
-  .title:hover {
-    background: linear-gradient(rgba(133,147,153, .5), transparent);
-  }
-}
-
 .slide1 {
   height: 1400px;
   background: #283048; /* fallback for old browsers */
@@ -78,6 +59,23 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+
+  .title {
+    @include brandName;
+    margin: 4rem;
+    border: 1px solid white;
+    padding-top: 12.2rem;
+    padding-left: 3.4rem;
+    padding-right: 3.4rem;
+    padding-bottom: 3.2rem;
+    height: 400px;
+    text-align: center;
+    opacity: .2px;
+
+    .title:hover {
+      background: linear-gradient(rgba(133,147,153, .5), transparent);
+    }
+  }
 
   .nikes {
     width: 100%;
@@ -137,20 +135,28 @@ a:hover {
   height: 1400px;
   width: 100%;
   background-color: black;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 
   h1 {
     @include brandName;
     z-index: 1;
-    position: absolute;
-    top: 3400px;
-    right: 730px;
+    text-align: center;
     border: 1px solid white;
-    padding-top: 3.2em;
-    padding-right: .4em;
-    padding-left: .9em;
-    padding-bottom: 3.2em;
+    padding-top: 13.2rem;
+    padding-right: 3.4rem;
+    padding-left: 2.5rem;
+    padding-bottom: 3.2rem;
     opacity: .2px;
-    margin-left: .3em;
+    margin-top: 13rem;
+    margin-left: 4rem;
+    height: 500px;
+    width: 300px;
   }
+}
+
+
+@media (min-width: 700) and (max-width: 900){
+
 }
