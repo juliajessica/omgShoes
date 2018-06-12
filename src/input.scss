@@ -1,11 +1,18 @@
 // @import "./../bower_components/sass-autoprefixer/scss/prefixes";
 
-// $themeColor-Light: #f3e2c7;
-// $themeColor-Dark:#b68d4c;
-$fontSize: 16px;
 
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Quattrocento');
+
+
+
+//sass variables
+$fontSize: 17px;
+$fontSizeLarge: 30px;
 $theme-font: verdana, sans-serif;
+$font2:'Quattrocento', serif;
 
+//mixins
 @mixin brandName {
   font-size: 90px;
   color: white;
@@ -14,6 +21,7 @@ $theme-font: verdana, sans-serif;
   -moz-text-shadow: 2px 1px 0px rgba(30, 32, 57, 0.92);
 }
 
+//css
 * {
   padding:0;
   margin: 0;
@@ -44,12 +52,21 @@ a:hover {
 }
 
 .title {
+  @include brandName;
   z-index: 1;
   position: absolute;
   top: 400px;
   left: 730px;
-  @include brandName;
+  border: 1px solid white;
+  padding-top: 3.2em;
+  padding-left: .4em;
+  padding-right: .4em;
+  padding-bottom: 3.2em;
+  opacity: .2px;
 
+  .title:hover {
+    background: linear-gradient(rgba(133,147,153, .5), transparent);
+  }
 }
 
 .slide1 {
@@ -57,8 +74,72 @@ a:hover {
   background: #283048; /* fallback for old browsers */
   background: linear-gradient(to top, #283048, rgba(133,147,152, .5), transparent), url("img/homepage.jpeg") no-repeat center;
   background-size: cover;
-  
+
   .nikes {
     width: 100%;
+  }
+}
+
+.slide2 {
+  height: 1400px;
+  width: 100%;
+  background: #fff;
+  padding-left: 2em;
+  padding-top: 3.7em;
+
+  .slide2-grid {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 600px));
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: $fontSizeLarge;
+    font-family: $font2;
+    font-style: italic;
+    padding-bottom: 1.2em;
+  }
+
+  .text-2 {
+    padding-top: 9em;
+    justify-content: center;
+  }
+}
+
+.slide2-grid p:nth-child(1) {
+  padding-top: 2em;
+  justify-content: center;
+  //color: red;
+}
+
+.slide2-grid img:hover {
+  // background: linear-gradient(to top, #283048, rgba(133,147,152, .5), transparent);
+  opacity: .2;
+  background-color: black;
+  // background: rgb(133,147,152); opacity: 0.2;
+  // cursor:pointer;
+}
+
+.slide3 {
+  height: 1400px;
+  width: 100%;
+  background-color: black;
+
+
+  h1 {
+    @include brandName;
+    z-index: 1;
+    position: absolute;
+    top: 3400px;
+    right: 730px;
+    border: 1px solid white;
+    padding-top: 3.2em;
+    padding-right: .4em;
+    padding-left: .9em;
+    padding-bottom: 3.2em;
+    opacity: .2px;
+    margin-left: .3em;
+
   }
 }
