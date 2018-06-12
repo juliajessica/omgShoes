@@ -6,6 +6,14 @@ $fontSize: 16px;
 
 $theme-font: verdana, sans-serif;
 
+@mixin brandName {
+  font-size: 90px;
+  color: white;
+  text-shadow: 2px 1px 0px rgba(30, 32, 57, 0.92);
+  -webkit-text-shadow: 2px 1px 0px rgba(30, 32, 57, 0.92);
+  -moz-text-shadow: 2px 1px 0px rgba(30, 32, 57, 0.92);
+}
+
 * {
   padding:0;
   margin: 0;
@@ -14,13 +22,16 @@ $theme-font: verdana, sans-serif;
 
 body {
   font: $theme-font;
+  font-size: $fontSize;
 }
 
 nav {
   background-color: black;
   color: white;
-  font-size: $fontSize;
+  font-size: 1.3em;
   padding: 10px 40px;
+  line-height: 1.9em;
+  letter-spacing: .2em;
 }
 
 a {
@@ -32,23 +43,22 @@ a:hover {
   color: #d9dce0;
 }
 
-.slide1 {
-  width: 100%;
-}
-
 .title {
   z-index: 1;
   position: absolute;
   top: 400px;
   left: 730px;
-  font-size: 90px;
-  color: white;
-  text-shadow: 2px 1px 0px rgba(30, 32, 57, 0.92);
-  -webkit-text-shadow: 2px 1px 0px rgba(30, 32, 57, 0.92);
-  -moz-text-shadow: 2px 1px 0px rgba(30, 32, 57, 0.92);
+  @include brandName;
 
 }
 
-.nikes {
-  width: 100%;
+.slide1 {
+  height: 1400px;
+  background: #283048; /* fallback for old browsers */
+  background: linear-gradient(to top, #283048, rgba(133,147,152, .5), transparent), url("img/homepage.jpeg") no-repeat center;
+  background-size: cover;
+  
+  .nikes {
+    width: 100%;
+  }
 }
